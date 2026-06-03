@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kizuna - Jeugdprofessional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Kizuna - Kaat Van den Bossche: Erkend seksuoloog en jeugdprofessional in Dilbeek. Begeleiding bij seksualiteit, relaties en opvoeding.">
+  <meta name="keywords" content="seksuoloog Dilbeek, jeugdprofessional Dilbeek, relatietherapie, Kaat Van den Bossche, Kizuna">
+  <style>
+    /* --- BASIS STYLING --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body { background-color: #f4efe7; color: #2c3e50; line-height: 1.6; overflow-x: hidden; }
+    
+    .page-fade { animation: fadeIn 0.8s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* --- STABIELE VLOEIENDE HEADER --- */
+    header {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      padding: 20px; /* Constante padding voorkomt haperen */
+      text-align: center; 
+      background-color: rgba(244, 239, 231, 0.95); 
+      backdrop-filter: blur(5px);
+      position: sticky; 
+      top: 0; 
+      z-index: 1000;
+      transition: background-color 0.4s, box-shadow 0.4s;
+    }
+    
+    header.scrolled { 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+      background-color: #f4efe7;
+    }
+
+    .logo-img { 
+      width: 220px; 
+      height: auto; 
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+      will-change: width; 
+    }
+
+    header.scrolled .logo-img { width: 140px; }
+    
+    nav { margin-top: 15px; transition: margin 0.4s; }
+    header.scrolled nav { margin-top: 10px; }
+
+    nav a { text-decoration: none; margin: 0 12px; color: #2c3e50; font-weight: 500; font-size: 14px; transition: 0.3s; }
+    nav a:hover { color: #5c77a0; }
+
+    /* --- DROPDOWN NAVIGATIE --- */
+    .dropdown { position: relative; display: inline-block; padding-bottom: 10px; margin-bottom: -10px; }
+    .dropbtn { cursor: pointer; text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 14px; padding: 0 12px; display: inline-block; }
+    .dropdown-content {
+      display: none; position: absolute; background-color: #f4efe7; min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1001; border-radius: 4px;
+      top: 100%; left: 50%; transform: translateX(-50%); text-align: left;
+    }
+    .dropdown-content a { color: #2c3e50; padding: 12px 16px; text-decoration: none; display: block; font-size: 13px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .dropdown-content a:last-child { border-bottom: none; }
+    .dropdown-content a:hover { background-color: #e8e0d5; color: #5c77a0; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* --- LAYOUT & CONTENT --- */
+    .section-wrapper { max-width: 1100px; margin: 20px auto 40px; padding: 0 20px; }
+    
+    .page-title { text-align: center; margin-bottom: 30px; }
+    .page-title h1 { font-size: 36px; color: #2c3e50; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; }
+    .page-title .divider { width: 50px; height: 2px; background-color: #8bb881; margin: 10px auto; }
+
+    .info-box { padding: 40px; border-radius: 12px; margin-bottom: 30px; }
+    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+
+    /* KLEUREN */
+    .bg-visie-blauw { background-color: #2c3e50; color: white; text-align: center; padding: 60px 40px; }
+    .bg-visie-blauw h2 { color: white; border-bottom: 1px solid rgba(255, 255, 255, 0.4); margin-bottom: 20px; padding-bottom: 15px; font-size: 28px; }
+    .bg-visie-blauw p { font-style: italic; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
+    .bg-visie-blauw p:last-child { margin-bottom: 0; }
+
+    .bg-groen { background-color: #8bb881; color: white; }
+    .bg-groen h2 { border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding-bottom: 15px; margin-bottom: 25px; }
+    
+    .bg-soft-beige { background-color: #eee7dc; border: 1px solid rgba(0,0,0,0.02); }
+    .bg-soft-beige h2 { padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid rgba(44, 62, 80, 0.1); }
+
+    .bg-doorzichtig-groen { background-color: rgba(139, 184, 129, 0.12); color: #2c3e50; border: 1px solid rgba(139, 184, 129, 0.4); }
+    .bg-doorzichtig-blauw { background-color: rgba(92, 119, 160, 0.12); color: #2c3e50; border: 1px solid rgba(92, 119, 160, 0.4); }
+
+    .price-row { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(44, 62, 80, 0.2); padding: 10px 0; }
+    
+    .btn-dark { background: #2c3e50; color: #f4efe7; padding: 16px 35px; border-radius: 4px; text-decoration: none; display: inline-block; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; border: none; }
+    .btn-dark:hover { background-color: #5c77a0; transform: translateY(-2px); }
+
+    .cta-footer { text-align: center; padding: 60px 20px; }
+
+    ul { list-style: none; margin-top: 15px; }
+    li { margin-bottom: 8px; position: relative; padding-left: 25px; }
+    li::before { content: "•"; position: absolute; left: 0; color: #8bb881; font-weight: bold; }
+    .bg-groen li::before { color: rgba(255,255,255,0.7); }
+
+    /* --- DEFTIGE GEBALANCEERDE FOOTER --- */
+    footer { background-color: #2c3e50; color: #f4efe7; padding: 40px 20px 20px; margin-top: 60px; }
+    .footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; }
+    .footer-section { flex: 1; }
+    .footer-section:nth-child(1) { text-align: left; }
+    .footer-section:nth-child(2) { text-align: center; }
+    .footer-section:nth-child(3) { text-align: right; }
+    .footer-section h3 { font-size: 12px !important; margin-bottom: 12px !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: #8bb881 !important; }
+    .footer-section p { font-size: 13px !important; color: rgba(244, 239, 231, 0.8) !important; line-height: 1.6 !important; margin-bottom: 4px !important; }
+    .footer-bottom { max-width: 1100px; margin: 30px auto 0; padding-top: 15px; border-top: 1px solid rgba(244, 239, 231, 0.1); text-align: center; font-size: 11px; opacity: 0.5; }
+    .footer-bottom a { color: inherit; text-decoration: underline; }
+
+    @media (max-width: 850px) { 
+      .split-grid { grid-template-columns: 1fr; } 
+      .footer-content { flex-direction: column; text-align: center; gap: 30px; }
+      .footer-section:nth-child(1), .footer-section:nth-child(2), .footer-section:nth-child(3) { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-fade">
+    <header id="mainHeader">
+      <a href="home.html"><img src="Images/Logo.png" alt="Logo" class="logo-img"></a>
+      <nav>
+        <a href="home.html">HOME</a>
+        <a href="over.html">OVER</a>
+        <div class="dropdown">
+          <span class="dropbtn">AANBOD ▾</span>
+          <div class="dropdown-content">
+            <a href="seksuologie.html">Seksuologie</a>
+            <a href="jeugdprofessional.html">Jeugdprofessional</a>
+          </div>
+        </div>
+        <a href="afspraak.html">AFSPRAAK</a>
+      </nav>
+    </header>
+
+    <div class="section-wrapper">
+      
+      <div class="page-title">
+        <h1>Jeugdprofessional</h1>
+        <div class="divider"></div>
+      </div>
+
+      <div class="info-box bg-visie-blauw">
+        <h2>Een plek waar groei centraal staat</h2>
+        <p>Ik kijk naar kinderen en jongeren als mensen in ontwikkeling, die gevormd worden door wat ze meemaken, voelen en ervaren doorheen hun leven.</p>
+        <p>Gedrag of emoties staan zelden op zichzelf. Vaak vertellen ze iets over gebeurtenissen van vroeger, waarden en normen die ze meekrijgen of moeilijkheden waar ze op botsen. Daarom sta ik niet alleen stil bij wat er vandaag speelt, maar ook bij de weg die daaraan voorafging.</p>
+        <p>In mijn praktijk creëer ik een plek waar kinderen, jongeren en hun ouders kunnen vertragen en ruimte krijgen om te begrijpen wat er leeft – zodat er stap voor stap opnieuw beweging en balans kan ontstaan.</p>
+      </div>
+
+      <div class="split-grid">
+        <div class="info-box bg-soft-beige">
+          <h2>Voor kinderen & jongeren</h2>
+          <p>Niet iedereen vindt het makkelijk om te praten. Zeker voor kinderen die nog geen woorden hebben voor hun emoties, werk ik met creatieve materialen zoals klei, kleuren en spel. Zo probeer ik zichtbaar te maken wat er dwarszit zonder dat het 'moet' uitgelegd worden. Er wordt samen gekeken naar wat dit gedrag vertelt en hoe dit gegroeid is doorheen de tijd.</p>
+          <p style="margin-top: 15px;">Jongeren met een psychische kwetsbaarheid of zij die worstelen met vragen over identiteit en seksualiteit vinden hier een veilige plek.</p>
+        </div>
+        <div class="info-box bg-soft-beige">
+          <h2>Voor het gezin</h2>
+          <p>Wanneer één of meerdere gezinsleden zich zorgen maken over iemand, kijken we naar het hele systeem. Bij een gezinsaanmelding werk ik met een <em>bezorgdheidsvragenlijst</em> om ieders perspectief helder te krijgen.</p>
+          <p style="margin-top: 15px;">In gezinnen waar psychische kwetsbaarheid een rol speelt, kan het helpend zijn om samen stil te staan bij wat dit voor iedereen betekent. Niet alles is altijd makkelijk thuis te bespreken, daarom bied ik een veilige plek waar er ruimte is voor dialoog en begrip.</p>
+        </div>
+      </div>
+
+      <div class="info-box bg-doorzichtig-blauw">
+        <h2>Professionaliteit & expertise</h2>
+        <p>Om de kwaliteit van de zorg te waarborgen, bewaak ik steeds de grenzen van mijn eigen expertise. Indien ik tijdens de verkenning of het traject merk dat ik niet de juiste hulpverlener ben voor jouw specifieke hulpvraag, zal ik dit eerlijk met je bespreken en je gericht doorverwijzen naar een passende collega of instantie.</p>
+      </div>
+
+      <div class="info-box bg-groen">
+        <h2>Je bent hier welkom als...</h2>
+        <ul>
+          <li> Je als kind of jongere merkt dat je ergens vastloopt, maar het nog moeilijk vindt om je gevoelens onder woorden te brengen of te begrijpen wat er precies speelt.
+<li>Je als ouder of gezin op zoek bent naar ondersteuning bij uitdagingen rond opvoeding, gedrag of de ontwikkeling van je kind.<li>
+<li>Het binnen het gezin minder vanzelfsprekend loopt (bijvoorbeeld door een verandering of ingrijpende gebeurtenis) en jullie samen willen kijken naar hoe jullie met elkaar omgaan en comminiceren</li>
+<li>Je als jongere vragen hebt over jezelf, je identiteit, relaties of seksualiteit, en hier in alle openheid en zonder oordeel over wil praten.</li>
+<li>Er iets ingrijpends is gebeurd en er nood is aan een rustige, veilige plek om dit op een eigen tempo te verwerken.</li>
+<li>Je simpelweg voelt dat je nood hebt aan een luisterend oor, ook als je nog niet precies weet wat de hulpvraag is.</li>
+        </ul>
+      </div>
+
+      <div class="info-box bg-doorzichtig-groen">
+        <h2>Tarieven Jeugdprofessional</h2>
+        <div class="price-row"><span>Individuele sessie kind/jongere (50 min)</span> <span>€70</span></div>
+        <div class="price-row"><span>Ouder- of gezinsbegeleiding (75 min)</span> <span>€85</span></div>
+        <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;"><em>Betaling kan via Payconiq of cash na afloop van elke sessie.</em></p>
+      </div>
+
+      <section class="cta-footer">
+        <p style="margin-bottom: 25px;">Heb je het gevoel dat iets vastloopt, bij jezelf, je kind of binnen je gezin? Je hoeft het niet alleen uit te zoeken.</p>
+        <a href="afspraak.html" class="btn-dark">Maak een afspraak</a>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><strong>Kaat Van den Bossche</strong></p>
+          <p>vandenbosschekaat@outlook.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Locatie</h3>
+          <p>Gemeenteplein 4</p>
+          <p>1700 Dilbeek</p>
+        </div>
+        <div class="footer-section">
+          <h3>Wettelijk</h3>
+          <p>KBO: 1037.162.305</p>
+          <p>Seksuoloog (VVS)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Kizuna | <a href="privacy.html">Privacybeleid</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.onscroll = function() {
+      const header = document.getElementById("mainHeader");
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollPos > 40) {
+        header.classList.add("scrolled");
+      } else { 
+        header.classList.remove("scrolled");
+      }
+    };
+  </script>
+
+</body>
+</html>

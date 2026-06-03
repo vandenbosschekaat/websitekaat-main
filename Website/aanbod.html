@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaat Van den Bossche - Aanbod</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Kizuna - Kaat Van den Bossche: Erkend seksuoloog en jeugdprofessional in Dilbeek. Begeleiding bij seksualiteit, relaties en opvoeding.">
+<meta name="keywords" content="seksuoloog Dilbeek, jeugdprofessional Dilbeek, relatietherapie, Kaat Van den Bossche, Kizuna">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body { background-color: #f4efe7; color: #2c3e50; }
+
+    /* --- PAGINA OVERGANG EFFECT --- */
+    .page-fade {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- STICKY HEADER --- */
+    header {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center;
+      padding: 30px 20px; 
+      text-align: center; 
+      background-color: #f4efe7; 
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    header.scrolled {
+      padding: 10px 20px; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo-img { 
+      width: 250px; 
+      height: auto; 
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+      will-change: width;
+    }
+
+    header.scrolled .logo-img { 
+      width: 120px; 
+    }
+
+    nav { margin-top: 15px; transition: 0.4s; }
+    header.scrolled nav { margin-top: 5px; }
+
+    nav a { text-decoration: none; margin: 0 12px; color: #2c3e50; font-weight: 500; font-size: 14px; transition: 0.3s; }
+    nav a.active { font-weight: 600; text-decoration: underline; }
+
+    /* --- LAY-OUT SECTIES --- */
+    .section-intro { 
+      background-color: #2c3e50; 
+      padding: 80px 20px; 
+      display: flex; 
+      justify-content: center; 
+    }
+    .container-white { 
+      background: #f4efe7; 
+      max-width: 1100px; 
+      width: 100%; 
+      padding: 50px; 
+      border-radius: 8px; 
+      color: #2c3e50; 
+    }
+
+    .wrapper { padding: 40px 20px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+    
+    .info-box { 
+      max-width: 1100px; 
+      width: 100%; 
+      padding: 60px; 
+      border-radius: 12px; 
+      color: #fafafa; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    }
+    
+    .bg-blue { background-color: #5c77a0; }
+    .bg-green { background-color: #8bb881; }
+
+    h2 { margin-bottom: 25px; font-size: 28px; }
+    h3 { margin: 30px 0 15px; font-size: 22px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 8px; }
+    p { line-height: 1.8; margin-bottom: 15px; }
+
+    .theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+    .theme-item ul { padding-left: 20px; list-style-type: square; margin-top: 10px; }
+    .theme-item li { margin-bottom: 8px; line-height: 1.6; }
+
+    .price-list { margin: 25px 0; }
+    .price-row { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(255,255,255,0.4); padding: 10px 0; }
+
+    .traject-step { margin-bottom: 30px; }
+    .traject-step strong { font-size: 18px; display: block; margin-bottom: 5px; }
+
+    .availability-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .cta-area { text-align: center; margin: 40px 0 80px; }
+    .btn-dark { 
+      background: #2c3e50; 
+      color: #f4efe7; 
+      padding: 18px 40px; 
+      border-radius: 4px; 
+      text-decoration: none; 
+      font-weight: 600; 
+      display: inline-block; 
+      transition: 0.3s; 
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-dark:hover { background: #1a2a36; transform: translateY(-2px); }
+
+    @media (max-width: 768px) {
+      .theme-grid { grid-template-columns: 1fr; }
+      .info-box { padding: 40px 20px; }
+    }
+   /* --- VERBETERDE DROPDOWN NAVIGATIE --- */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px; /* Creëert een onzichtbare brug naar het menu */
+      margin-bottom: -10px;
+    }
+
+    .dropbtn {
+      cursor: pointer;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      font-size: 14px;
+      transition: 0.3s;
+      padding: 0 12px;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f4efe7;
+      min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1001; /* Zorgt dat het over de tekst heen valt */
+      border-radius: 4px;
+      text-align: left;
+      top: 100%; /* Begint direct onder de padding van de dropdown */
+      left: 50%;
+      transform: translateX(-50%); /* Centreert het menu onder het woord Aanbod */
+    }
+
+    .dropdown-content a {
+      color: #2c3e50;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      margin: 0 !important; /* Overschrijft eventuele marges */
+      font-size: 13px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #e8e0d5;
+      color: #5c77a0;
+    }
+
+    /* Het scenario waarbij het menu verschijnt bij hooveren */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="page-fade">
+
+    <header id="mainHeader">
+      <a href="home.html"><img src="Images/Logo.png" alt="Logo" class="logo-img"></a>
+<nav>
+  <a href="home.html">HOME</a>
+  <a href="over.html">OVER</a>
+  <div class="dropdown">
+    <span class="dropbtn">AANBOD ▾</span>
+    <div class="dropdown-content">
+      <a href="seksuologie.html">Seksuologie</a>
+      <a href="jeugdprofessional.html">Jeugdprofessional</a> </div>
+  </div>
+  <a href="afspraak.html">AFSPRAAK</a>
+</nav>
+    </header>
+
+    <section class="section-intro">
+      <div class="container-white">
+        <h2>Mijn Aanbod</h2>
+        <p>Welkom in een ruimte waar elk thema bespreekbaar is. Of je nu komt voor jezelf, je relatie, of voor je kind: we vertrekken altijd vanuit een warme, oordeelvrije houding. Samen kijken we naar wat er speelt en wie er eventueel betrokken kan worden om de weg naar herstel of groei te ondersteunen.</p>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <section class="info-box bg-blue">
+        <h2>Thema's & Begeleiding</h2>
+        <div class="theme-grid">
+          <div class="theme-item">
+            <h3>Seksuologie (Individu & Koppel)</h3>
+            <p>Begeleiding bij zowel algemene seksuologische vragen als specifieke uitdagingen.</p>
+            <ul>
+              <li>Verschil in verlangen</li>
+              <li>Opwindings- of erectieproblemen</li>
+              <li>Pijn bij het vrijen (vaginisme, vulvodynie)</li>
+              <li>Moeilijkheden met orgasme</li>
+              <li>Seksuele identiteit, geaardheid en gender</li>
+              <li>Impact van ziekte, trauma of zwangerschap</li>
+            </ul>
+          </div>
+          <div class="theme-item">
+            <h3>Kinder- & Jongerencoaching</h3>
+            <p>Een veilige haven voor jonge mensen om te brengen wat er op hun hart ligt.</p>
+            <ul>
+              <li><strong>Oordeelvrije plek:</strong> Alles mag er zijn, van grote angsten tot kleine zorgen.</li>
+              <li><strong>Systemische aanpak:</strong> Waar nodig betrekken we de context (ouders/gezin).</li>
+              <li>Emotionele weerbaarheid en sociale vaardigheden.</li>
+              <li>Begeleiding bij vragen over lichamelijke ontwikkeling en grenzen.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-box bg-green">
+        <h2>Wat mag je verwachten?</h2>
+        
+        <div class="traject-step">
+          <strong>1. Intake (Verkenning)</strong>
+          <p>Tijdens dit eerste gesprek brengen we je hulpvraag in kaart. We kijken niet alleen naar hetgeen waarop je vastloopt, maar ook naar jouw sterktes en omgeving. We voelen of er een klik is, want vertrouwen is de basis.</p>
+        </div>
+
+        <div class="traject-step">
+          <strong>2. Opvolging</strong>
+          <p>In de vervolgsessies gaan we dieper in op de patronen die je wil doorbreken. Voor kinderen en jongeren gebruik ik vaak spel of creatieve tools. Indien zinvol, nodigen we naasten uit voor een gezamenlijk gesprek om de verandering duurzaam te maken.</p>
+        </div>
+
+        <div class="traject-step">
+          <strong>3. Locatie & Flexibiliteit</strong>
+          <p>De sessies vinden fysiek plaats in de praktijk in Dilbeek. Mocht het voor jou niet lukken om ter plaatse te komen, dan kunnen gesprekken ook online doorgaan. Zo blijft de begeleiding continu, ook bij ziekte of verplaatsingsmoeilijkheden.</p>
+        </div>
+
+        <div class="traject-step">
+          <strong>4. Doorverwijzing</strong>
+          <p>Ik bewaak nauwgezet de grenzen van mijn expertise. Indien nodig zal ik in overleg met jou een doorverwijzing voorstellen naar een arts, kinesist of gespecialiseerde instantie.</p>
+        </div>
+
+        <h3>Beschikbaarheid</h3>
+        <div class="availability-box">
+          <p>Gesprekken (in de praktijk) zijn mogelijk op:</p>
+          <ul style="list-style: none; margin-top: 10px;">
+            <li><strong>Woensdag:</strong> 11:00 – 17:00</li>
+            <li><strong>Donderdag:</strong> 18:00 – 22:00</li>
+          </ul>
+          <p style="margin-top: 15px; font-size: 14px; font-style: italic;">Andere momenten (online) zijn eventueel mogelijk in overleg.</p>
+        </div>
+
+        <h3>Tarievenoverzicht</h3>
+        <div class="price-list">
+          <div class="price-row"><span>Individuele intake (75 min)</span> <span>€85</span></div>
+          <div class="price-row"><span>Individuele opvolgsessie (50 min)</span> <span>€75</span></div>
+          <div class="price-row"><span>Koppelsessie intake (90 min)</span> <span>€100</span></div>
+          <div class="price-row"><span>Koppelsessie opvolgsessie (75 min)</span> <span>€85</span></div>
+          <div class="price-row"><span>Kinder- & Jongerencoaching (50 min)</span> <span>€70</span></div>
+        </div>
+        <p><em>Betaling kan via Payconiq of cash.</em></p>
+      </section>
+
+ <section class="cta-footer">
+      <p>Voel je dat je ergens mee zit of wil je graag iets bespreken? Je bent welkom voor een eerste kennismaking.</p>
+      <a href="afspraak.html" class="btn-dark">Maak een afspraak</a>
+    </section>
+    </div>
+
+  </div> <script>
+    window.onscroll = function() {
+      const header = document.getElementById("mainHeader");
+      const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollPos > 50) {
+        header.classList.add("scrolled");
+      } else if (scrollPos <= 10) {
+        header.classList.remove("scrolled");
+      }
+    };
+  </script>
+
+</body>
+</html>

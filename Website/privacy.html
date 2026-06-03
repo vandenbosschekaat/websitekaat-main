@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kizuna - Privacybeleid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <meta name="description" content="Kizuna - Kaat Van den Bossche: Erkend seksuoloog en jeugdprofessional in Dilbeek. Begeleiding bij seksualiteit, relaties en opvoeding.">
+<meta name="keywords" content="seksuoloog Dilbeek, jeugdprofessional Dilbeek, relatietherapie, Kaat Van den Bossche, Kizuna">
+ <style>
+    /* BASIS STYLING */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body { background-color: #f4efe7; color: #2c3e50; line-height: 1.6; }
+    
+    .page-fade { animation: fadeIn 0.8s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+    header {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 30px 20px; text-align: center; background-color: #f4efe7; 
+      position: sticky; top: 0; z-index: 1000;
+      transition: padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    header.scrolled { padding: 10px 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    .logo-img { width: 250px; height: auto; transition: width 0.4s ease; }
+    header.scrolled .logo-img { width: 120px; }
+    
+    nav { margin-top: 15px; }
+    nav a { text-decoration: none; margin: 0 12px; color: #2c3e50; font-weight: 500; font-size: 14px; transition: 0.3s; }
+    nav a:hover { color: #5c77a0; }
+
+    /* DROPDOWN */
+    .dropdown { position: relative; display: inline-block; padding-bottom: 10px; margin-bottom: -15px; }
+    .dropbtn { cursor: pointer; text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 14px; padding: 0 12px; display: inline-block; }
+    .dropdown-content {
+      display: none; position: absolute; background-color: #f4efe7; min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1001; border-radius: 4px;
+      top: 100%; left: 50%; transform: translateX(-50%); text-align: left;
+    }
+    .dropdown-content a { color: #2c3e50; padding: 12px 16px; text-decoration: none; display: block; font-size: 13px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* CONTENT LAYOUT */
+    .section-wrapper { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+    .page-title { text-align: center; margin-bottom: 30px; }
+    .page-title h1 { font-size: 32px; color: #2c3e50; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; }
+    .page-title .divider { width: 50px; height: 2px; background-color: #8bb881; margin: 10px auto; }
+
+    .info-box { padding: 40px; border-radius: 12px; background-color: #eee7dc; border: 1px solid rgba(0,0,0,0.05); }
+    .info-box h2 { font-size: 18px; color: #5c77a0; margin: 25px 0 10px; text-transform: uppercase; letter-spacing: 1px; }
+    .info-box p { margin-bottom: 15px; font-size: 15px; }
+    .info-box ul { margin-bottom: 15px; padding-left: 20px; list-style-type: none; }
+    .info-box li { margin-bottom: 5px; position: relative; padding-left: 20px; font-size: 15px; }
+    .info-box li::before { content: "•"; position: absolute; left: 0; color: #8bb881; font-weight: bold; }
+
+    /* DEFTIGE FOOTER */
+    footer { background-color: #2c3e50; color: #f4efe7; padding: 40px 20px 20px; margin-top: 60px; }
+    .footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; }
+    .footer-section { flex: 1; }
+    .footer-section:nth-child(1) { text-align: left; }
+    .footer-section:nth-child(2) { text-align: center; }
+    .footer-section:nth-child(3) { text-align: right; }
+    .footer-section h3 { font-size: 12px !important; margin-bottom: 12px !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: #8bb881 !important; }
+    .footer-section p { font-size: 13px !important; color: rgba(244, 239, 231, 0.8) !important; line-height: 1.6 !important; margin-bottom: 4px !important; }
+    .footer-bottom { max-width: 1100px; margin: 30px auto 0; padding-top: 15px; border-top: 1px solid rgba(244, 239, 231, 0.1); text-align: center; font-size: 11px; opacity: 0.5; }
+    .footer-bottom a { color: inherit; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .footer-content { flex-direction: column; text-align: center; gap: 30px; }
+      .footer-section:nth-child(1), .footer-section:nth-child(2), .footer-section:nth-child(3) { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-fade">
+    <header id="mainHeader">
+      <a href="home.html"><img src="Images/Logo.png" alt="Logo" class="logo-img"></a>
+      <nav>
+        <a href="home.html">HOME</a>
+        <a href="over.html">OVER</a>
+        <div class="dropdown">
+          <span class="dropbtn">AANBOD ▾</span>
+          <div class="dropdown-content">
+            <a href="seksuologie.html">Seksuologie</a>
+            <a href="jeugdprofessional.html">Jeugdprofessional</a>
+          </div>
+        </div>
+        <a href="afspraak.html">AFSPRAAK</a>
+      </nav>
+    </header>
+
+    <div class="section-wrapper">
+      <div class="page-title">
+        <h1>Privacybeleid</h1>
+        <div class="divider"></div>
+      </div>
+
+      <div class="info-box">
+        <p>Binnen mijn praktijk, <strong>Kizuna</strong>, hecht ik veel waarde aan een veilige omgeving. Dat geldt niet alleen voor de gesprekken in de praktijkruimte, maar ook voor de manier waarop ik met jouw persoonlijke gegevens omga. In dit privacybeleid leg ik uit welke gegevens ik verzamel en hoe ik hiermee omga, geheel volgens de geldende privacywetgeving (GDPR).</p>
+
+        <h2>1. Wie is verantwoordelijk?</h2>
+        <p>Kaat Van den Bossche (Kizuna)<br>
+        Gemeenteplein 4, 1700 Dilbeek<br>
+        KBO: 1037.162.305<br>
+        E-mail: vandenbosschekaat@outlook.com</p>
+
+        <h2>2. Welke gegevens worden verwerkt?</h2>
+        <p>Wanneer je een afspraak maakt of een traject start, verzamel ik de volgende gegevens:</p>
+        <ul>
+          <li>Identificatiegegevens (naam, voornaam)</li>
+          <li>Contactgegevens (e-mailadres, telefoonnummer)</li>
+          <li>Inhoudelijke info (gegevens die je zelf deelt ter voorbereiding van een sessie)</li>
+          <li>Facturatiegegevens (voor de afhandeling van betalingen)</li>
+        </ul>
+
+        <h2>3. Waarom verzamel ik deze gegevens?</h2>
+        <p>Ik gebruik deze gegevens uitsluitend voor:</p>
+        <ul>
+          <li>Het inplannen en bevestigen van afspraken.</li>
+          <li>Het bieden van de juiste professionele ondersteuning en het bijhouden van een cliëntdossier (wettelijk verplicht).</li>
+          <li>De financiële administratie en facturatie.</li>
+        </ul>
+
+        <h2>4. Beroepsgeheim en vertrouwelijkheid</h2>
+        <p>Als klinisch seksuoloog en jeugdprofessional ben ik gebonden aan het <strong>beroepsgeheim</strong>. Jouw gegevens worden nooit met derden gedeeld zonder jouw expliciete, voorafgaande toestemming, tenzij er een wettelijke verplichting is of in noodsituaties waarin de veiligheid van jezelf of anderen in het gedrang komt.</p>
+
+        <h2>5. Bewaartermijn</h2>
+        <p>Ik bewaar jouw gegevens niet langer dan strikt noodzakelijk is om de doelen te realiseren waarvoor je gegevens worden verzameld, rekening houdend met de wettelijke bewaartermijnen voor hulpverleningsdossiers.</p>
+
+        <h2>6. Jouw rechten</h2>
+        <p>Je hebt altijd het recht om jouw gegevens in te zien, te corrigeren of te laten verwijderen. Neem hiervoor gerust contact met me op via e-mail.</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p><strong>Kaat Van den Bossche</strong></p>
+          <p>vandenbosschekaat@outlook.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Locatie</h3>
+          <p>Gemeenteplein 4</p>
+          <p>1700 Dilbeek</p>
+        </div>
+        <div class="footer-section">
+          <h3>Wettelijk</h3>
+          <p>KBO: 1037.162.305</p>
+          <p>Seksuoloog (VVS)</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Kizuna | <a href="privacy.html">Privacybeleid</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    window.onscroll = function() {
+      const header = document.getElementById("mainHeader");
+      if (window.pageYOffset > 50) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    };
+  </script>
+
+</body>
+</html>
