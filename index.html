@@ -4,7 +4,7 @@
   <script defer src="https://cloud.umami.is/script.js" data-website-id="1d61eca1-5a22-409a-a335-503b22b92d9c"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaat Van den Bossche - Seksuoloog, Jeugdprofessional & Hartcoherentie</title>
+  <title>Kaat Van den Bossche - Seksuoloog, relatietherapeut & hartcoherentie</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   <meta name="description" content="Kizuna - Kaat Van den Bossche: Erkend seksuoloog, jeugdprofessional en hartcoherentie coach in Dilbeek. Begeleiding bij seksualiteit, relaties, opvoeding en stressregulatie.">
   <meta name="keywords" content="seksuoloog Dilbeek, jeugdprofessional Dilbeek, hartcoherentie Dilbeek, relatietherapie, Kaat Van den Bossche, Kizuna">
@@ -82,16 +82,35 @@
     .hero-text h2 { font-size: 32px; margin-bottom: 20px; }
     .hero-text p { margin-bottom: 20px; line-height: 1.8; font-size: 17px; }
 
-    /* --- EXPERTISE SECTIE --- */
-    .expertise-section { max-width: 1100px; margin: 80px auto; padding: 0 20px; }
+    /* --- EXPERTISE SECTIE (2 kolommen) --- */
+    .expertise-section { max-width: 900px; margin: 80px auto; padding: 0 20px; }
     .expertise-grid { display: flex; gap: 30px; justify-content: center; }
     .expertise-box { flex: 1; padding: 50px 30px; color: white; text-align: center; border-radius: 15px; transition: 0.4s; text-decoration: none; }
     .box-seksuologie { background-color: #8bb881; }
-    .box-jeugd { background-color: #5c77a0; }
     .box-hartcoherentie { background-color: #d4a373; }
     .expertise-box h2 { font-size: 24px; margin-bottom: 15px; }
     .expertise-box p { line-height: 1.7; font-size: 15px; }
     .expertise-box:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+    /* --- KENNISMAKING EVENT SECTIE --- */
+    .event-section { max-width: 900px; margin: 0 auto 60px; padding: 0 20px; }
+    .event-box {
+      background-color: #eee7dc; border: 1px solid rgba(0,0,0,0.05);
+      border-radius: 15px; padding: 40px; text-align: center;
+    }
+    .event-box h2 { font-size: 26px; color: #2c3e50; margin-bottom: 15px; }
+    .event-box p { font-size: 16px; line-height: 1.7; margin-bottom: 20px; color: #2c3e50; max-width: 700px; margin-left: auto; margin-right: auto; }
+    
+    /* Stijl voor de affiche */
+    .event-poster {
+      max-width: 100%;
+      max-height: 550px;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
 
     /* --- DROPDOWN --- */
     .dropdown { position: relative; display: inline-block; padding-bottom: 10px; margin-bottom: -10px; }
@@ -105,8 +124,8 @@
     .dropdown:hover .dropdown-content { display: block; }
 
     /* --- CTA & FOOTER --- */
-    .cta-footer { padding: 30px 20px; text-align: center; background-color: #f4efe7; }
-    .cta-footer p { margin-bottom: 40px; font-size: 18px; color: #2c3e50; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .cta-footer { padding: 20px 20px 40px; text-align: center; background-color: #f4efe7; }
+    .cta-footer p { margin-bottom: 30px; font-size: 18px; color: #2c3e50; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
     .btn-dark { background: #2c3e50; color: white; padding: 18px 45px; border-radius: 4px; text-decoration: none; font-weight: 600; display: inline-block; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
     .btn-dark:hover { background: #5c77a0; transform: translateY(-3px); }
 
@@ -193,20 +212,34 @@
       </div>
     </section>
 
+    <!-- 2 EXPERTISE BLOKKEN (Seksuologie & Hartcoherentie) -->
     <section class="expertise-section">
       <div class="expertise-grid">
         <a href="seksuologie.html" class="expertise-box box-seksuologie">
           <h2>Seksuologie</h2>
           <p>Je kan bij mij terecht met vragen rond seksualiteit, intimiteit en relaties. Geen taboe, zonder oordeel, waar ruimte wordt gemaakt om terug in verbinding te gaan met jezelf en/of je partner(s).</p>
         </a>
-        <a href="jeugdprofessional.html" class="expertise-box box-jeugd">
-          <h2>Jeugdprofessional</h2>
-          <p>Soms is het lastig om woorden te geven aan wat je voelt; ik ondersteun kinderen en jongeren om via spel en gesprek hun gevoelswereld weer te laten stromen.</p>
-        </a>
         <a href="Hartcoherentie.html" class="expertise-box box-hartcoherentie">
           <h2>Hartcoherentie</h2>
           <p>Breng je zenuwstelsel weer in balans via ademhalings- en stressreductietechnieken. Voor meer innerlijke rust, focus en een veerkrachtig lichaam.</p>
         </a>
+      </div>
+    </section>
+
+    <!-- KENNISMAKING MET DE PRAKTIJK MET AFFICHE -->
+    <section class="event-section">
+      <div class="event-box">
+        <h2>Kennismaking met onze praktijk</h2>
+        <p>Wil je graag vrijblijvend proeven van ons aanbod? Op <strong>zaterdag 28 november 2026</strong> zetten we de deuren van de praktijk open met fijne gratis workshops rond hartcoherentie, kinderyoga en dans & beweging!</p>
+        
+        <!-- Affiches-afbeelding uit je map ./Images/Affiche.png -->
+        <div>
+          <img src="./Images/Affiche.png" alt="Affiche Kennismaking Praktijk" class="event-poster">
+        </div>
+
+        <div>
+          <a href="Hartcoherentie.html" class="btn-dark" style="margin-top: 10px;">Ontdek mijn workshop!</a>
+        </div>
       </div>
     </section>
 
