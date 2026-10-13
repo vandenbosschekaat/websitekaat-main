@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kizuna - Hartcoherentie</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Kizuna - Kaat Van den Bossche: Erkend seksuoloog, jeugdprofessional en hartcoherentiecoach in Dilbeek. Begeleiding bij stress, burn-out, ademhaling voor volwassenen, jongeren en kinderen.">
-  <meta name="keywords" content="hartcoherentie Dilbeek, stressreductie, ademhalingstherapie, Kaat Van den Bossche, Kizuna, hyperventilatie, burn-out, kinderen, jongeren, schoolstress">
+  <meta name="description" content="Kizuna - Kaat Van den Bossche: Erkend seksuoloog, jeugdprofessional en hartcoherentiecoach in Dilbeek. Begeleiding bij stress, burn-out en ademhaling.">
+  <meta name="keywords" content="hartcoherentie Dilbeek, stressreductie, ademhalingstherapie, Kaat Van den Bossche, Kizuna, hyperventilatie, burn-out">
   <style>
     /* --- BASIS STYLING --- */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
@@ -15,7 +15,7 @@
     .page-fade { animation: fadeIn 0.8s ease-in-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* --- STABIELE VLOEIENDE HEADER --- */
+    /* --- HEADER --- */
     header {
       display: flex; 
       flex-direction: column; 
@@ -50,7 +50,7 @@
     nav a { text-decoration: none; margin: 0 12px; color: #2c3e50; font-weight: 500; font-size: 14px; transition: 0.3s; }
     nav a:hover { color: #5c77a0; }
 
-    /* --- DROPDOWN NAVIGATIE --- */
+    /* --- DROPDOWN --- */
     .dropdown { position: relative; display: inline-block; padding-bottom: 10px; margin-bottom: -10px; }
     .dropbtn { cursor: pointer; text-decoration: none; color: #2c3e50; font-weight: 500; font-size: 14px; padding: 0 12px; display: inline-block; }
     .dropdown-content {
@@ -64,66 +64,64 @@
     .dropdown:hover .dropdown-content { display: block; }
 
     /* --- LAYOUT & CONTENT --- */
-    .section-wrapper { max-width: 1100px; margin: 20px auto 40px; padding: 0 20px; }
+    .section-wrapper { max-width: 1000px; margin: 20px auto 40px; padding: 0 20px; }
     
     .page-title { text-align: center; margin-bottom: 30px; }
-    .page-title h1 { font-size: 36px; color: #2c3e50; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; }
+    .page-title h1 { font-size: 34px; color: #2c3e50; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; }
     .page-title .divider { width: 50px; height: 2px; background-color: #8bb881; margin: 10px auto; }
 
-    .info-box { padding: 40px; border-radius: 12px; margin-bottom: 30px; }
-    .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
-    .triple-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 10px; }
+    .info-box { padding: 35px; border-radius: 12px; margin-bottom: 25px; }
+    .triple-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 15px; }
 
     /* KLEUREN */
-    .bg-visie-blauw { background-color: #2c3e50; color: white; text-align: center; padding: 60px 40px; }
-    .bg-visie-blauw h2 { color: white; border-bottom: 1px solid rgba(255, 255, 255, 0.4); margin-bottom: 20px; padding-bottom: 15px; font-size: 28px; }
-    .bg-visie-blauw p { font-style: italic; font-size: 16px; line-height: 1.8; margin-bottom: 15px; }
-    .bg-visie-blauw p:last-child { margin-bottom: 0; }
+    .bg-visie-blauw { background-color: #2c3e50; color: white; text-align: center; padding: 45px 35px; }
+    .bg-visie-blauw h2 { color: white; border-bottom: 1px solid rgba(255, 255, 255, 0.3); margin-bottom: 15px; padding-bottom: 12px; font-size: 26px; }
+    .bg-visie-blauw p { font-style: italic; font-size: 15px; line-height: 1.7; }
 
     .bg-groen { background-color: #8bb881; color: white; }
-    .bg-groen h2 { border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding-bottom: 15px; margin-bottom: 25px; }
+    .bg-groen h2 { border-bottom: 1px solid rgba(255, 255, 255, 0.3); padding-bottom: 12px; margin-bottom: 15px; font-size: 24px; }
     
-    .bg-soft-beige { background-color: #eee7dc; border: 1px solid rgba(0,0,0,0.02); }
-    .bg-soft-beige h2 { padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid rgba(44, 62, 80, 0.1); }
+    .bg-soft-beige { background-color: #eee7dc; border: 1px solid rgba(0,0,0,0.03); }
+    .bg-soft-beige h2 { padding-bottom: 12px; margin-bottom: 15px; border-bottom: 1px solid rgba(44, 62, 80, 0.1); font-size: 24px; }
 
     .bg-doorzichtig-groen { background-color: rgba(139, 184, 129, 0.12); color: #2c3e50; border: 1px solid rgba(139, 184, 129, 0.4); }
     .bg-doorzichtig-blauw { background-color: rgba(92, 119, 160, 0.12); color: #2c3e50; border: 1px solid rgba(92, 119, 160, 0.4); }
 
     .price-row { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(44, 62, 80, 0.2); padding: 10px 0; }
     
-    .btn-dark { background: #2c3e50; color: #f4efe7; padding: 16px 35px; border-radius: 4px; text-decoration: none; display: inline-block; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; border: none; }
+    .btn-dark { background: #2c3e50; color: #f4efe7; padding: 14px 28px; border-radius: 4px; text-decoration: none; display: inline-block; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; border: none; font-size: 13px; }
     .btn-dark:hover { background-color: #5c77a0; transform: translateY(-2px); }
 
     .btn-link { display: inline-block; margin-top: 15px; color: #5c77a0; font-weight: 600; text-decoration: none; border-bottom: 1px solid #5c77a0; transition: 0.3s; }
     .btn-link:hover { color: #2c3e50; border-bottom-color: #2c3e50; }
 
-    .cta-footer { text-align: center; padding: 60px 20px; }
+    .cta-footer { text-align: center; padding: 40px 20px; }
 
-    ul { list-style: none; margin-top: 15px; }
-    li { margin-bottom: 8px; position: relative; padding-left: 25px; }
+    ul { list-style: none; margin-top: 10px; }
+    li { margin-bottom: 6px; position: relative; padding-left: 20px; font-size: 14px; }
     li::before { content: "•"; position: absolute; left: 0; color: #8bb881; font-weight: bold; }
-    .bg-groen li::before { color: rgba(255,255,255,0.7); }
+    .bg-groen li::before { color: rgba(255,255,255,0.8); }
 
-    /* TIMELINE VOOR HET TRAJECT */
+    /* TRAJECT STYLING */
     .traject-step { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(44, 62, 80, 0.1); }
     .traject-step:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
     .traject-step h3 { font-size: 16px; color: #2c3e50; font-weight: 600; margin-bottom: 5px; }
 
     /* FOOTER */
-    footer { background-color: #2c3e50; color: #f4efe7; padding: 40px 20px 20px; margin-top: 60px; }
-    .footer-content { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; }
+    footer { background-color: #2c3e50; color: #f4efe7; padding: 40px 20px 20px; margin-top: 50px; }
+    .footer-content { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; }
     .footer-section { flex: 1; }
     .footer-section:nth-child(1) { text-align: left; }
     .footer-section:nth-child(2) { text-align: center; }
     .footer-section:nth-child(3) { text-align: right; }
-    .footer-section h3 { font-size: 12px !important; margin-bottom: 12px !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: #8bb881 !important; }
+    .footer-section h3 { font-size: 12px !important; margin-bottom: 10px !important; letter-spacing: 1px !important; text-transform: uppercase !important; color: #8bb881 !important; }
     .footer-section p { font-size: 13px !important; color: rgba(244, 239, 231, 0.8) !important; line-height: 1.6 !important; margin-bottom: 4px !important; }
-    .footer-bottom { max-width: 1100px; margin: 30px auto 0; padding-top: 15px; border-top: 1px solid rgba(244, 239, 231, 0.1); text-align: center; font-size: 11px; opacity: 0.5; }
+    .footer-bottom { max-width: 1000px; margin: 25px auto 0; padding-top: 15px; border-top: 1px solid rgba(244, 239, 231, 0.1); text-align: center; font-size: 11px; opacity: 0.5; }
     .footer-bottom a { color: inherit; text-decoration: underline; }
 
     @media (max-width: 850px) { 
-      .split-grid, .triple-grid { grid-template-columns: 1fr; } 
-      .footer-content { flex-direction: column; text-align: center; gap: 30px; }
+      .triple-grid { grid-template-columns: 1fr; } 
+      .footer-content { flex-direction: column; text-align: center; gap: 25px; }
       .footer-section:nth-child(1), .footer-section:nth-child(2), .footer-section:nth-child(3) { text-align: center; }
     }
   </style>
@@ -158,125 +156,123 @@
       <!-- VISIE / INTRO -->
       <div class="info-box bg-visie-blauw">
         <h2>Een holistische blik op jouw ademhaling</h2>
-        <p>Lichaam en geest zijn onlosmakelijk met elkaar verbonden. Wanneer het zenuwstelsel overbelast raakt, uiten spanningen zich niet alleen mentaal, maar ook fysiek. Een ontregeld ademhalingspatroon speelt hierin vaak een sleutelrol — bij volwassenen, maar net zo goed bij kinderen en jongeren.</p>
-        <p>Binnen Kizuna benader ik hartcoherentie vanuit een holistisch kader: we kijken naar het gehele plaatje. Hartcoherentie is een wetenschappelijk onderbouwde methode om via een specifiek ademhalingsritme het hartritme in balans te brengen en zo het autonoom zenuwstelsel weer tot rust te laten komen.</p>
+        <p>Lichaam en geest zijn onlosmakelijk met elkaar verbonden. Wanneer het zenuwstelsel overbelast raakt, uiten spanningen zich niet alleen mentaal, maar ook fysiek. Hartcoherentie is een wetenschappelijk onderbouwde methode om via een specifiek ademhalingsritme het autonoom zenuwstelsel weer in balans en tot rust te brengen.</p>
       </div>
 
-      <!-- HERKEN JE JEZELF / JE KIND IN... (KLACHTEN) -->
+      <!-- HERKEN JE JEZELF IN... -->
       <div class="info-box bg-groen">
-        <h2>Herken je jezelf of je kind in een of meerdere van volgende signalen?</h2>
-        <p style="margin-bottom: 20px;">Wanneer we verkeerd of chronisch 'hoog' ademen, uit zich dat op verschillende manieren. Zowel volwassenen als kinderen en jongeren ervaren hiervan de gevolgen:</p>
+        <h2>Herken je jezelf of je kind in een van deze signalen?</h2>
+        <p style="font-size: 14px;">Wanneer we chronisch 'hoog' of ontregeld ademen, kan zich dat uiten op verschillende vlakken:</p>
         
         <div class="triple-grid">
           <div>
-            <strong style="font-size: 15px; text-decoration: underline;">Somatische & lichamelijke klachten:</strong>
-            <ul style="margin-top: 10px;">
-              <li>Nek-, schouder- of rugpijn door spierspanning</li>
-              <li>Spijsverteringsproblemen, maag- of darmklachten</li>
-              <li>Chronische (subtiele) hyperventilatie of beklemd gevoel</li>
-              <li>Vermoeidheid en moeite met in- of doorslapen</li>
-              <li>Hartkloppingen of gejaagdheid in rust</li>
+            <strong style="font-size: 14px; text-decoration: underline;">Lichamelijke klachten:</strong>
+            <ul>
+              <li>Nek-, schouder- of rugpijn</li>
+              <li>Spijsverteringsproblemen</li>
+              <li>Snel buiten adem of gejaagdheid</li>
+              <li>Vermoeidheid & slaapproblemen</li>
+              <li>Hartkloppingen in rust</li>
             </ul>
           </div>
 
           <div>
-            <strong style="font-size: 15px; text-decoration: underline;">Psychologische & emotionele factoren:</strong>
-            <ul style="margin-top: 10px;">
-              <li>Aanhoudende stress, gejaagdheid of chronische druk</li>
-              <li>Symptomen van overspanning en burn-out</li>
-              <li>Angstgevoelens, piekeren en een vol hoofd</li>
-              <li>Snel overprikkeld zijn of emotionele schommelingen</li>
-              <li>Het gevoel de controle over je eigen rust kwijt te zijn</li>
-              <li>In je hoofd verzeild geraken tijdens seksualiteit</li>
+            <strong style="font-size: 14px; text-decoration: underline;">Emotionele factoren:</strong>
+            <ul>
+              <li>Aanhoudende stress of chronische druk</li>
+              <li>Symptomen van overspanning / burn-out</li>
+              <li>Angstgevoelens, piekeren & vol hoofd</li>
+              <li>Snel overprikkeld zijn</li>
+              <li>Onrust bij intieme of drukke momenten</li>
             </ul>
           </div>
 
           <div>
-            <strong style="font-size: 15px; text-decoration: underline;">Specifiek bij kinderen & jongeren:</strong>
-            <ul style="margin-top: 10px;">
-              <li>Schoolstress, toetsangst of faalangst</li>
-              <li>Onverklaarbare buikpijn of hoofdpijn voor school/activiteiten</li>
+            <strong style="font-size: 14px; text-decoration: underline;">Kinderen & jongeren:</strong>
+            <ul>
+              <li>Schoolstress of faalangst</li>
+              <li>Onverklaarbare buikpijn voor school</li>
               <li>Moeite met concentratie of stilzitten</li>
-              <li>Moeite met emotieregulatie (snel boos of verdrietig)</li>
-              <li>Onrust of overprikkeling na een schooldag</li>
+              <li>Snel emotioneel overspoeld raken</li>
+              <li>Moeite met ontprikkelen na de dag</li>
             </ul>
-            <p style="margin-top: 12px; font-size: 13px;">Lees meer over bredere begeleiding via <a href="jeugdprofessional.html" style="color: white; text-decoration: underline; font-weight: 600;">Jeugdprofessional</a>.</p>
           </div>
+        </div>
+      </div>
+
+      <!-- GRATIS KENNISMAKINGSDAG -->
+      <div class="info-box bg-soft-beige">
+        <h2>Gratis Kennismaking met Hartcoherentie</h2>
+        <p>Wil je graag op een toegankelijke manier ontdekken wat ademhaling voor jouw rust en zenuwstelsel kan betekenen? Tijdens onze kennismakingsmomenten bieden we deze interactieve sessie <strong>volledig gratis</strong> aan <em>(normale waarde €35)</em>.</p>
+        
+        <div style="margin-top: 15px; background: rgba(255,255,255,0.85); padding: 20px; border-radius: 8px;">
+          <p style="color: #2c3e50; font-size: 15px; margin-bottom: 8px;"><strong>Wat houdt deze sessie in?</strong></p>
+          <p style="font-size: 14px;">Deze groepssessie vormt inhoudelijk de <strong>eerste stap (Sessie 1)</strong> van het volledige traject. We duiken in de werking van het zenuwstelsel en sluiten af met een eerste ademhalings- en bewustwordingsoefening.</p>
+          
+          <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; color: #5c77a0;">
+            🌱 <strong>Mooie extra:</strong> Omdat deze gratis kennismaking gelijk staat aan Sessie 1, kun je hierna — indien je dat wenst — heel eenvoudig en rechtstreeks instromen in de individuele vervolgsessies (Sessie 2) van het vierdelig traject. Zo start je jouw traject alvast met een fijne voorsprong.
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+          <div>
+            <p style="font-size: 14px;">📍 <strong>Locatie:</strong> Praktijk Kizuna, Dilbeek</p>
+            <p style="font-size: 14px;">🗓️ <strong>Datum:</strong> 28 november om 12:30</p>
+          </div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpwo9oCogSRaYEhw8YkwA13Tai7M3SYobkIQBj80xWUrjciw/viewform?usp=header" target="_blank" class="btn-dark">Schrijf je gratis in →</a>
         </div>
       </div>
 
       <!-- HET 4-SESSIE TRAJECT -->
       <div class="info-box bg-soft-beige">
         <h2>Het 4-sessie traject Hartcoherentie</h2>
-        <p style="margin-bottom: 20px;">Het traject is zo opgebouwd dat je stap voor stap leert begrijpen wat er in je lichaam gebeurt én je de juiste vaardigheden aangeleerd krijgt om zelfstandig aan de slag te gaan. We starten met een heldere theoretische basis in groep, gevolgd door drie individuele sessies op maat. Bij <strong>kinderen en jongeren</strong> worden het tempo en de insteek afgestemd op hun leefwereld en ontwikkelingsniveau, waarbij ouders optioneel nauw worden betrokken.</p>
+        <p style="margin-bottom: 20px; font-size: 14px;">Het traject is zo opgebouwd dat je stap voor stap leert begrijpen wat er in je lichaam gebeurt én je de juiste vaardigheden aangeleerd krijgt om zelfstandig aan de slag te gaan. We starten met een heldere theoretische basis in groep, gevolgd door drie individuele sessies op maat. Bij <strong>kinderen en jongeren</strong> worden het tempo en de insteek afgestemd op hun leefwereld en ontwikkelingsniveau, waarbij ouders optioneel nauw worden betrokken.</p>
 
         <div class="traject-step">
-          <h3>Sessie 1: Groepssessie – Theoretische kennismaking & Bewustwording (60 min)</h3>
-          <p>We starten in groep met een toegankelijke en wetenschappelijk onderbouwde introductie tot hartcoherentie. Tijdens dit uur ontdek je wat hartcoherentie precies is en welke fysieke en mentale voordelen het je brengt. We duiken in de werking van je autonoom zenuwstelsel en de rol van de <em>nervus vagus</em> bij herstel. Deze eerste sessie vormt het nodige fundament voor het verdere traject en bevat weinig zware inhoudelijke oefeningen, maar we sluiten wél af met een eerste waardevolle <strong>bewustwordingsoefening rond jouw ademhaling</strong>.</p>
+          <h3>Sessie 1: Groepssessie – Theoretische basis & Bewustwording (60 min)</h3>
+          <p style="font-size: 14px;">We starten in groep met een toegankelijke en wetenschappelijk onderbouwde introductie tot hartcoherentie. Tijdens dit uur ontdek je wat hartcoherentie precies is en welke fysieke en mentale voordelen het je brengt. We duiken in de werking van je autonoom zenuwstelsel en de rol van de <em>nervus vagus</em> bij herstel. Deze eerste sessie vormt het nodige fundament voor het verdere traject en bevat weinig zware inhoudelijke oefeningen, maar we sluiten wél af met een eerste waardevolle <strong>bewustwordingsoefening rond jouw ademhaling</strong>.</p>
           
           <p style="margin-top: 10px; font-size: 0.95em; color: #2c3e50;"><em>💡 <strong>Goed om te weten:</strong> Het deelnemen aan deze eerste groepssessie verplicht je tot niets. Je kan deze introductie volledig vrijblijvend volgen om te ontdekken of hartcoherentie en de methodiek bij jou passen.</em></p>
           
-          <p style="margin-top: 10px; font-weight: 500;">📅 <strong>Wanneer:</strong> Elke eerste donderdag van de maand (om de twee maanden) om 19:00u.</p>
-          <p style="margin-top: 5px; font-style: italic; font-size: 0.9em; opacity: 0.9;">* Volg je de theoretische kennismaking liever individueel? Dat kan uiteraard ook. Neem hiervoor gerust contact op via e-mail.*</p>
+          <div style="margin-top: 12px; background: rgba(255,255,255,0.7); padding: 12px 15px; border-radius: 6px;">
+            <p style="font-size: 14px; font-weight: 600; color: #2c3e50;">📅 Eerstvolgende data in de praktijk (om 19:00u):</p>
+            <ul style="margin-top: 5px;">
+              <li>Donderdag 3 december om 19:00u</li>
+              <li>Donderdag 4 februari om 19:00u</li>
+            </ul>
+            <p style="margin-top: 8px; font-size: 13px;">📩 <strong>Inschrijven:</strong> Stuur een e-mail naar <a href="mailto:vandenbosschekaat@outlook.com" style="color: #2c3e50; font-weight: 600;">vandenbosschekaat@outlook.com</a> met je naam en de gewenste datum.</p>
+          </div>
+          <p style="margin-top: 8px; font-style: italic; font-size: 0.9em; opacity: 0.9;">Volg je de theoretische kennismaking liever individueel? Dat kan uiteraard ook. Neem hiervoor gerust contact op via e-mail.</p>
         </div>
 
         <div class="traject-step">
           <h3>Sessie 2: Individuele ademmeting & opzet van de oefeningen (45 min)</h3>
-          <p>In deze eerste individuele sessie gaan we concreet met jouw persoonlijke situatie aan de slag. Met behulp van professionele bio-feedback apparatuur bepalen we jouw optimale ademritme (of dat van je kind). Je krijgt gerichte handvatten en een op maat gemaakt ademschema mee om thuis zelfstandig te beginnen oefenen.</p>
+          <p style="font-size: 14px;">In deze eerste individuele sessie gaan we concreet met jouw persoonlijke situatie aan de slag. Met behulp van professionele bio-feedback apparatuur bepalen we jouw optimale ademritme (of dat van je kind). Je krijgt gerichte handvatten en een op maat gemaakt ademschema mee om thuis zelfstandig te beginnen oefenen.</p>
         </div>
 
         <div class="traject-step">
           <h3>Sessie 3: Individuele evaluatie & bijsturing (45 min)</h3>
-          <p>We bespreken hoe het thuisoefenen is verlopen. Wat ging er vlot en waar ondervond je nog weerstand of stress? We voeren opnieuw een meting uit en sturen bij waar nodig (qua ademfrequentie, focus of houding) zodat de techniek steeds natuurlijker en effectiever aanvoelt.</p>
+          <p style="font-size: 14px;">We bespreken hoe het thuisoefenen is verlopen. Wat ging er vlot en waar ondervond je nog weerstand of stress? We voeren opnieuw een meting uit en sturen bij waar nodig (qua ademfrequentie, focus of houding) zodat de techniek steeds natuurlijker en effectiever aanvoelt.</p>
         </div>
 
         <div class="traject-step">
           <h3>Sessie 4: Individueel integratiegesprek & toekomstvisie (45 min)</h3>
-          <p>Tijdens deze afrondende sessie kijken we naar de vooruitgang en de impact die de oefeningen hebben gehad op je dagelijks leven. We maken een concreet plan om hartcoherentie blijvend te integreren in je routine. Ook bespreken we ondersteunende hulpmiddelen en bio-feedback tools, zoals bijvoorbeeld de tactiele adembegeleider Moonbird.</p>
+          <p style="font-size: 14px;">Tijdens deze afrondende sessie kijken we naar de vooruitgang en de impact die de oefeningen hebben gehad op je dagelijks leven. We maken een concreet plan om hartcoherentie blijvend te integreren in je routine. Ook bespreken we ondersteunende hulpmiddelen en bio-feedback tools, zoals bijvoorbeeld de tactiele adembegeleider Moonbird.</p>
         </div>
 
         <a href="afspraak.html" class="btn-link">Start een traject & maak een afspraak →</a>
       </div>
 
-      <!-- INSCHRIJVEN GROEPSSESSIE -->
-      <div class="info-box bg-doorzichtig-blauw">
-        <h2>Inschrijven voor de introductie groepssessie</h2>
-        <p>De introductie groepssessies vinden plaats in de <strong>eerste donderdag van de maand (om de twee maanden)</strong> op de praktijk in Dilbeek.</p>
-        
-        <div style="margin-top: 15px; margin-bottom: 20px; background: rgba(255,255,255,0.7); padding: 15px 20px; border-radius: 8px;">
-          <strong style="color: #2c3e50;">Eerstvolgende data:</strong>
-          <ul style="margin-top: 8px;">
-            <li><strong>Donderdag 1 oktober</strong> om 19:00u</li>
-            <li><strong>Donderdag 3 december</strong> om 19:00u</li>
-          </ul>
-        </div>
-
-        <p>Om de kwaliteit en een veilige, vertrouwde sfeer te bewaken, is de groepssessie <strong>bewust beperkt tot maximaal 6 personen</strong>. De kleine groep maakt het mogelijk om voldoende rust te creëren, vragen te stellen en eventueel persoonlijke verhalen met elkaar te delen.</p>
-
-        <div style="margin-top: 20px; background: rgba(255,255,255,0.6); padding: 18px; border-radius: 8px; border-left: 4px solid #5c77a0;">
-          <p style="margin-bottom: 5px;"><strong>Hoe schrijf je je in?</strong></p>
-          <p>Stuur een e-mail naar <a href="mailto:vandenbosschekaat@outlook.com" style="color: #2c3e50; font-weight: 600;">vandenbosschekaat@outlook.com</a> met vermelding van je <strong>naam</strong> en de <strong>gewenste datum</strong>.</p>
-          <p style="margin-top: 8px; font-size: 13px; opacity: 0.9;"><em>Na ontvangst van je mail stuur ik je een bevestiging met alle praktische details en verdere instructies.</em></p>
-        </div>
-      </div>
-
-      <!-- WORKSHOPS (LOSGEKOPPELD) -->
-      <div class="info-box bg-soft-beige">
-        <h2>Workshops & Themasessies</h2>
-        <p>Naast het vaste traject organiseer ik op regelmatige tijdstippen losse workshops en verdiepingssessies rond ademhaling, stressreductie en lichaamsbewustzijn. Deze richten zich op specifieke doelgroepen (zoals volwassenen, jongeren of kinderen).</p>
-        <p style="margin-top: 10px;"><em>Aankomende data, locaties en thema's worden aangekondigd op de website en via sociale media. Neem gerust contact op bij vragen of voor aanvragen op maat.</em></p>
-      </div>
-
       <!-- TARIEVEN -->
       <div class="info-box bg-doorzichtig-groen">
         <h2>Tarieven Hartcoherentie</h2>
-        <div class="price-row"><span>Introductie groepssessie (60 min)</span> <span>€35</span></div>
-        <div class="price-row"><span>Vervolgsessies (45 min)</span> <span>€60</span></div>
-        <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;"><em>Betaling kan via Payconiq of cash na afloop van elke sessie.</em></p>
+        <div class="price-row"><span>Sessie 1: Introductie groepssessie (60 min)</span> <span>€35 *(Gratis tijdens de kennismakingsdag op 28/11)*</span></div>
+        <div class="price-row"><span>Sessie 2, 3 en 4: Individuele sessies (45 min)</span> <span>€60 / sessie</span></div>
+        <p style="margin-top: 12px; font-size: 13px; opacity: 0.8;"><em>Betaling kan via Payconiq of contant na afloop van elke sessie.</em></p>
       </div>
 
       <section class="cta-footer">
-        <p style="margin-bottom: 25px;">Klaar om de rust in lichaam en geest te herstellen?</p>
+        <p style="margin-bottom: 20px;">Klaar om meer rust in je zenuwstelsel te ervaren?</p>
         <a href="afspraak.html" class="btn-dark">Maak een afspraak</a>
       </section>
 
