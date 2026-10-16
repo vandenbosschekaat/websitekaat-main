@@ -101,7 +101,6 @@
     .event-box h2 { font-size: 26px; color: #2c3e50; margin-bottom: 15px; }
     .event-box p { font-size: 16px; line-height: 1.7; margin-bottom: 20px; color: #2c3e50; max-width: 700px; margin-left: auto; margin-right: auto; }
     
-    /* Stijl voor de affiche */
     .event-poster {
       max-width: 100%;
       max-height: 550px;
@@ -111,6 +110,24 @@
       margin: 20px 0 25px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
+
+    /* --- LAATSTE INZICHTEN / BLOG SECTIE --- */
+    .blog-preview-section { max-width: 900px; margin: 0 auto 80px; padding: 0 20px; }
+    .blog-preview-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+    .blog-preview-header h2 { font-size: 24px; color: #2c3e50; }
+    .blog-preview-header a { color: #5c77a0; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
+    .blog-preview-header a:hover { color: #2c3e50; }
+
+    .blog-card {
+      background-color: #eee7dc; border-radius: 15px; padding: 30px;
+      display: flex; flex-direction: column; gap: 15px;
+      border: 1px solid rgba(0,0,0,0.05); transition: 0.3s;
+    }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+    .blog-card .tag { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #8bb881; }
+    .blog-card h3 { font-size: 20px; color: #2c3e50; line-height: 1.4; }
+    .blog-card p { font-size: 15px; color: #2c3e50; line-height: 1.6; }
+    .blog-card .read-more { color: #d4a373; font-weight: 600; text-decoration: none; font-size: 14px; }
 
     /* --- DROPDOWN --- */
     .dropdown { position: relative; display: inline-block; padding-bottom: 10px; margin-bottom: -10px; }
@@ -167,6 +184,7 @@
       .footer-section:nth-child(1), .footer-section:nth-child(2), .footer-section:nth-child(3) { text-align: center; }
       .expertise-grid { flex-direction: column; }
       .flip-card { width: 100%; max-width: 300px; height: 380px; margin: 0 auto; }
+      .blog-preview-header { flex-direction: column; align-items: flex-start; gap: 10px; }
     }
   </style>
 </head>
@@ -188,6 +206,7 @@
             <a href="Hartcoherentie.html">Hartcoherentie</a>
           </div>
         </div>
+        <a href="blog.html">BLOG</a>
         <a href="afspraak.html">AFSPRAAK</a>
       </nav>
     </header>
@@ -232,7 +251,6 @@
         <h2>Kennismaking met onze praktijk</h2>
         <p>Wil je graag vrijblijvend proeven van ons aanbod? Op <strong>zaterdag 28 november 2026</strong> zetten we de deuren van de praktijk open met fijne gratis workshops rond hartcoherentie, kinderyoga en dans & beweging!</p>
         
-        <!-- Affiches-afbeelding uit je map ./Images/Affiche.png -->
         <div>
           <img src="./Images/Affiche.png" alt="Affiche Kennismaking Praktijk" class="event-poster">
         </div>
@@ -240,6 +258,20 @@
         <div>
           <a href="Hartcoherentie.html" class="btn-dark" style="margin-top: 10px;">Ontdek mijn workshop!</a>
         </div>
+      </div>
+    </section>
+
+    <!-- LAATSTE INZICHTEN (BLOG SECTIE) -->
+    <section class="blog-preview-section">
+      <div class="blog-preview-header">
+        <h2>Laatste inzichten</h2>
+        <a href="blog.html">Bekijk alle artikelen →</a>
+      </div>
+      <div class="blog-card">
+        <span class="tag">Hartcoherentie & Neurodivergentie</span>
+        <h3>Van overprikkeling naar rust: waarom hartcoherentie zo krachtig werkt bij neurodivergentie</h3>
+        <p>Voor wie leeft met ADHD of autisme voelt de wereld vaak als een luidspreker die net iets te hard staat. Ontdek waarom traditionele ontspanning vaak tekortschiet en hoe hartcoherentie fysiek helpt om de rust te herstellen.</p>
+        <a href="blog-neurodivergentie.html" class="read-more">Lees het volledige artikel →</a>
       </div>
     </section>
 
